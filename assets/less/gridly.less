@@ -2,6 +2,9 @@
  * Page styles
  */
 
+@import url('http://fonts.googleapis.com/css?family=Ubuntu&subset=cyrillic-ext,latin');
+@import url('http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Vollkorn:400italic');
+
 @import url(http://postach.io/static/themes/_assets/less/elements.less);
 @import url(http://postach.io/static/themes/_assets/less/mixins.less);
 @import url(http://postach.io/static/themes/_assets/less/palette.less);
@@ -12,7 +15,8 @@
  * ====================== */
 @FontAwesomePath  : "http://postach.io/static/themes/_assets/fontawesome/font"; // Overrride the default font-awesome path
 
-@bodyFontFamily   : 'Droid Sans', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@bodyFontFamily   : 'Ubuntu', 'Droid Sans', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
 @bodyFontSize     : 16px;
 @bodyPadding      : 60px;
 
@@ -24,7 +28,6 @@
 @baseLineHeight   : 1.625;
 @headerLineHeight : 1.4;
 
-@import url('http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Vollkorn:400italic');
 
 /* ====================== */
 
@@ -35,13 +38,20 @@
 @-o-viewport { width: device-width }
 @viewport { width: device-width }
 
-* {
+
+    //Set all images to no-repeat so you don't have to individually
     // Don't hate the universal selector!
     // Set box-sizing: border-box; on every element
-    // http://paulirish.com/2012/box-sizing-border-box-ftw/
+    // http://paulirish.com/2012/box-sizing-border-box-ftw/ */
+
+
+* 
+{
     .box-sizing();
-    background-repeat: no-repeat; // Set all images to no-repeat so you don't have to individually
+    background-repeat: no-repeat; 
 }
+
+
 
 html {
     -webkit-text-size-adjust: 100%;
@@ -371,7 +381,7 @@ hr {
 .post-area {
     .margin-bottom(@bodyPadding/2);
     .blog-post {
-        .width(23.5%);
+        .width(31.5%);
         .margin-right(10px);
         .margin-bottom(10px);
         position: relative;

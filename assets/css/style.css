@@ -1,3 +1,4 @@
+@import url('http://fonts.googleapis.com/css?family=Ubuntu&subset=cyrillic-ext,latin');
 @import url('http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Vollkorn:400italic');
 /**
  * Page styles
@@ -1561,7 +1562,7 @@ body {
   padding-bottom: 1.25rem;
   font-weight: normal;
   font-size: 100%;
-  font-family: 'Droid Sans', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Ubuntu', 'Droid Sans', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.625;
   color: #252525;
   background: url('../img/light/bg.jpg');
@@ -1978,7 +1979,7 @@ hr.large {
   margin-bottom: 1.875rem;
 }
 .post-area .blog-post {
-  width: 23.5%;
+  width: 31.5%;
   margin-right: 10px;
   margin-right: 0.625rem;
   margin-bottom: 10px;
@@ -2563,3 +2564,4 @@ hr.large {
   line-height: 10pt;
   padding: 7px;
 }
+/*# sourceMappingURL=gridly.css.map */
