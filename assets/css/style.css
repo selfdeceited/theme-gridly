@@ -1966,8 +1966,8 @@ hr.large {
 }
 .page,
 .post {
-  width: 740px;
-  width: 46.25rem;
+  width: 90%;
+  margin-left: 4%;
   margin-top: 15px;
   margin-top: 0.9375rem;
   margin-bottom: 30px;
