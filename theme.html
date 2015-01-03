@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta charset="utf-8">
 <html prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
@@ -48,6 +49,7 @@
           <nav id="nav">
             <ul>
               <li><a href="/">Главная</a></li>
+              <li><a href="/tag/it">IT</a></li>
               <li><a href="http://summer68-1.apphb.com/">Портфолио</a></li>
               {% if pages %}
               {% for page in pages %}
@@ -105,7 +107,7 @@
       <div class="post-area">
 
         {% if is_tag %}
-        <h2 class="tag-head">Showing all posts tagged {{ tag }}:</h2>
+        <h2 class="tag-head">Все посты с тегом {{ tag }}:</h2>
         {% endif %}
 
         {% if posts %}
@@ -125,7 +127,7 @@
               </a>
               {% if post.tags %}
               <div class="post-tags">
-                <p>{{- post.tags|format_tags(humanize=True) -}}</p>
+                <p>{{- post.tags|format_tags(humanize=False) -}}</p>
               </div>
               {% endif %}
             </div>
@@ -136,11 +138,11 @@
               <h2><a href="{{ post.permalink }}">{{ post.title }}</a></h2>
               <p class="post-date"><time datetime="{{ post.created_at }}">{{ post.created_at|date_format }}</time></p>
               {% if post.tags and not post.photos %}
-              <p class="post-tags">{{- post.tags|format_tags(humanize=True) -}}</p>
+              <p class="post-tags">{{- post.tags|format_tags(humanize=False) -}}</p>
               {% endif %}
               {% if post.content|striptags|wordcount > 0 %}
               <p>{{ post.content|striptags|truncate(200) }}</p>
-              <p class="post-link"><a href="{{ post.permalink }}">View more &rarr;</a></p>
+              <p class="post-link"><a href="{{ post.permalink }}">Ещё &rarr;</a></p>
               {% endif %}
             </div>
           </article>
@@ -153,7 +155,7 @@
         </div>
         {% endif %}
         {% else %}
-        <h2 class="title"><em>No posts yet :(</em></h2>
+        <h2 class="title"><em> Нет постов :(</em></h2>
         {% endif %}
 
       {% elif post.type == 'post' %}
@@ -165,13 +167,13 @@
             <header>
               <h1>{{ post.title }}</h1>
             </header>
-            <p class="post-date">Published by {{ site.author }}, <time datetime="{{ post.created_at }}">{{ post.created_at|date_format }}</time></p>
+            <p class="post-date">Опубликован  {{ site.author }}, <time datetime="{{ post.created_at }}">{{ post.created_at|date_format }}</time></p>
             {{ post.content}}
           </div>
           <div class="post-footer">
             {{ theme.social.bar }}
             {% if post.tags %}
-              <p><strong>Tags:</strong> {{ post.tags|format_tags(humanize=True) }}</p>
+              <p><strong>Тэги: </strong> {{ post.tags|format_tags(humanize=False) }}</p>
             {% endif %}
           </div>
         </section>
@@ -217,7 +219,7 @@
           <div class="post-footer">
             {{ theme.social.bar }}
             {% if post.tags %}
-              <p><strong>Tags:</strong> {{ post.tags|format_tags(humanize=True) }}</p>
+              <p><strong>Тэги:</strong> {{ post.tags|format_tags(humanize=False) }}</p>
             {% endif %}
           </div>
         </section>
